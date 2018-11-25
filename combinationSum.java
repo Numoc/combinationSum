@@ -5,17 +5,17 @@ class Solution {
 	public static void main(String[] args) {
 		int[] candidates = {2,3,5};
 		int target = 8;
-		ArrayList<ArrayList<Integer>> answer = new ArrayList<ArrayList<Integer>>();
+		List<List<Integer>> answer = new ArrayList<List<Integer>>();
 		answer = combinationSum(candidates, target);
 		System.out.println(answer);
 	}
-    public static ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-   		ArrayList<ArrayList<Integer>> solutions = new ArrayList<ArrayList<Integer>>();
-   		ArrayList<Integer> solution = new ArrayList<Integer>();
+    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
+   		List<List<Integer>> solutions = new ArrayList<List<Integer>>();
+   		List<Integer> solution = new ArrayList<Integer>();
    		helper(candidates, target, solution, solutions, 0);
    		return solutions;
     }
-    public static ArrayList<Integer> helper(int[] candidates, int target, ArrayList<Integer> solution, ArrayList<ArrayList<Integer>> solutions, int i) {
+    public static ArrayList<Integer> helper(int[] candidates, int target, List<Integer> solution, List<List<Integer>> solutions, int i) {
     	if(target < 0) {
     		return null;
     	}
@@ -31,5 +31,5 @@ class Solution {
     		solution.remove(solution.size()-1);
     	}
     	return null;
-    }
+    } 
 }
