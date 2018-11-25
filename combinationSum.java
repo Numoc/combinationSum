@@ -3,11 +3,8 @@ import java.util.List;
 
 class Solution {
 	public static void main(String[] args) {
-		int[] candidates = {2,3,5};
-		int target = 8;
-		List<List<Integer>> answer = new ArrayList<List<Integer>>();
-		answer = combinationSum(candidates, target);
-		System.out.println(answer);
+		System.out.println(combinationSum(new int[] {2,3,5}, 8));
+		System.out.println(combinationSum(new int[] {2,3,6,7}, 7));
 	}
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
    		List<List<Integer>> solutions = new ArrayList<List<Integer>>();
